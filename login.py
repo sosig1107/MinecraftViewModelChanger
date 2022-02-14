@@ -10,8 +10,6 @@ code_line_placeholdertext = "Type in Code"
 def wait(ms):
     QtTest.QTest.qWait(ms)
 
-
-
 class Ui_login_window(object):
 
     code = "1234"
