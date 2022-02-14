@@ -60,6 +60,7 @@ class Ui_login_window(object):
         self.code_line.setGeometry(QtCore.QRect(50, 30, 130, 20))
         self.code_line.setText("")
         self.code_line.setEchoMode(QtWidgets.QLineEdit.Password)
+
         self.code_line.setObjectName("code_line")
         login_window.setCentralWidget(self.centralwidget)
 
