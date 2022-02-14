@@ -1,8 +1,12 @@
 import runpy
 import threading
+
+import PyQt5
 from PyQt5 import QtWidgets, QtTest
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from PyQt5.QtGui import QPixmap
+from PySide2.QtCore import QRect
 import sys
 
 def wait(ms):
@@ -17,11 +21,17 @@ class LoginScreen(QMainWindow):
         # Define assets
         self.loginButton = self.findChild(QPushButton, "login_button")
         self.code_line = self.findChild(QLineEdit, "code_line")
+        self.lockPicture = self.findChild(QLabel, "lockpicture")
         # self.bt1 = self.findChild(QPushButton, "pushButton")
 
         #Do stuff
         # self.bt1.clicked.connect(self.clicked)
         self.loginButton.clicked.connect(self.openWindow)
+        self.lockPicture.setPixmap(QPixmap("lockRed.ico"))
+        self.lockpicture.setGeometry(0, 0, 30, 30)
+        # self.lockpicture.setPixmap(QtGui.QPixmap("lockRed.ico"))
+        self.lockPicture.setScaledContents(True)
+
         # self.loginButton.clicked.connect(self.openWindow)
 
         # Render
