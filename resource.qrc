@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="new">
+    <file>pickaxe.png</file>
     <file>lockRed.ico</file>
   </qresource>
 </RCC>

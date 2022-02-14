@@ -64,15 +64,15 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>26</width>
-      <height>24</height>
+      <width>30</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resource.qrc">:/new/Graphicloads-Android-Settings-Lock.ico</pixmap>
+     <pixmap resource="resource.qrc">:/new/lockRed.ico</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

@@ -7,6 +7,7 @@ from PyQt5 import QtWidgets, QtTest
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QIcon
 from PySide2.QtCore import QRect
 import sys
 from pynput import keyboard
@@ -34,9 +35,9 @@ class LoginScreen(QMainWindow):
         #Do stuff
         # self.bt1.clicked.connect(self.clicked)
         self.loginButton.clicked.connect(self.openWindow)
+        self.setWindowIcon(QIcon("lockRed.ico"))
         self.lockPicture.setPixmap(QPixmap("lockRed.ico"))
         self.lockpicture.setGeometry(0, 0, 30, 30)
-        # self.lockpicture.setPixmap(QtGui.QPixmap("lockRed.ico"))
         self.lockPicture.setScaledContents(True)
         self.code_line.enterEvent(self.openWindow())
 
