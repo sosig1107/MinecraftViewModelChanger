@@ -14,16 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">.QPushButton
-{
-	transition-duration: 1s;
-}
-
-.QPushButton:hover
-{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	background-color:red;
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -45,31 +36,31 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="zinput">
+   <widget class="QDoubleSpinBox" name="PosZ">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>330</y>
+      <x>80</x>
+      <y>210</y>
       <width>62</width>
       <height>22</height>
      </rect>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="yInput">
+   <widget class="QDoubleSpinBox" name="PosY">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>290</y>
+      <x>80</x>
+      <y>170</y>
       <width>62</width>
       <height>22</height>
      </rect>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="xInput">
+   <widget class="QDoubleSpinBox" name="PosX">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>250</y>
+      <x>80</x>
+      <y>130</y>
       <width>62</width>
       <height>22</height>
      </rect>
@@ -78,7 +69,7 @@
    <widget class="QLabel" name="pickaxeLabel">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>560</x>
       <y>150</y>
       <width>270</width>
       <height>260</height>
@@ -94,6 +85,186 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QFrame" name="framePos">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>100</y>
+      <width>101</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: gray</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QLabel" name="PosLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pos</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QDoubleSpinBox" name="RotY">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>170</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="RotX">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>130</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="RotZ">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>210</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QFrame" name="framePos_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>100</y>
+      <width>101</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: gray</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="ScaleY">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>170</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="ScaleX">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>130</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="ScaleZ">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>210</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QFrame" name="framePos_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>100</y>
+      <width>101</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: gray</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QLabel" name="ScaleLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Scale</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="RotationLabel">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>110</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rotation</string>
+    </property>
+   </widget>
+   <zorder>framePos_3</zorder>
+   <zorder>framePos_2</zorder>
+   <zorder>framePos</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>PosZ</zorder>
+   <zorder>PosY</zorder>
+   <zorder>PosX</zorder>
+   <zorder>pickaxeLabel</zorder>
+   <zorder>RotY</zorder>
+   <zorder>RotX</zorder>
+   <zorder>RotZ</zorder>
+   <zorder>ScaleY</zorder>
+   <zorder>ScaleX</zorder>
+   <zorder>ScaleZ</zorder>
+   <zorder>RotationLabel</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

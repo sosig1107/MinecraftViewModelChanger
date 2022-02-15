@@ -58,7 +58,12 @@ class Ui_main_window(object):
         QtCore.QMetaObject.connectSlotsByName(main_window)
 
     def clicker(self):
-        print(self.xInput.value())
+        tools = ["sword", "axe", "pickaxe", "shovel", "hoe"]
+        types = ["wooden", "stone", "iron", "golden", "diamond", "netherite"]
+
+        for x in types:
+            for y in tools:
+                print(f"{types[x]}_{tools[y]}")
 
     def retranslateUi(self, main_window):
         _translate = QtCore.QCoreApplication.translate
