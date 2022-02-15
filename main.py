@@ -29,26 +29,28 @@ class MainWindow(QMainWindow):
         self.ScaleY = self.findChild(QDoubleSpinBox, "ScaleY")
         self.ScaleZ = self.findChild(QDoubleSpinBox, "ScaleZ")
 
-        self.PosX.setMinimum(-500)
-        self.PosX.setMaximum(500)
-        self.PosY.setMinimum(-500)
-        self.PosY.setMaximum(500)
-        self.PosZ.setMinimum(-500)
-        self.PosZ.setMaximum(500)
+        val = 1000
 
-        self.RotX.setMinimum(-500)
-        self.RotX.setMaximum(500)
-        self.RotY.setMinimum(-500)
-        self.RotY.setMaximum(500)
-        self.RotZ.setMinimum(-500)
-        self.RotZ.setMaximum(500)
+        self.PosX.setMinimum(val)
+        self.PosX.setMaximum(val)
+        self.PosY.setMinimum(val)
+        self.PosY.setMaximum(val)
+        self.PosZ.setMinimum(val)
+        self.PosZ.setMaximum(val)
 
-        self.ScaleX.setMinimum(-500)
-        self.ScaleX.setMaximum(500)
-        self.ScaleY.setMinimum(-500)
-        self.ScaleY.setMaximum(500)
-        self.ScaleZ.setMinimum(-500)
-        self.ScaleZ.setMaximum(500)
+        self.RotX.setMinimum(val)
+        self.RotX.setMaximum(val)
+        self.RotY.setMinimum(val)
+        self.RotY.setMaximum(val)
+        self.RotZ.setMinimum(val)
+        self.RotZ.setMaximum(val)
+
+        self.ScaleX.setMinimum(val)
+        self.ScaleX.setMaximum(val)
+        self.ScaleY.setMinimum(val)
+        self.ScaleY.setMaximum(val)
+        self.ScaleZ.setMinimum(val)
+        self.ScaleZ.setMaximum(val)
 
         self.menuDatei.addAction(self.actionOpen)
         self.actionOpen.triggered.connect(self.openFile)
@@ -93,7 +95,7 @@ class MainWindow(QMainWindow):
 
 
     def openFile(self):
-        self.fpath = QFileDialog.getExistingDirectory(directory=r"C:\Users\sscho\Downloads")
+        self.fpath = QFileDialog.getExistingDirectory(directory=r"C:\Users\Stephen\AppData\Roaming\.minecraft\resourcepacks")
         self.editLine()
         # print(fname)
 
@@ -104,37 +106,32 @@ class MainWindow(QMainWindow):
         # self.xinput.value = lines[39]
 
         # Pos
-        pos = lines[39].replace('"', "").replace("            translation: 	", "").replace(',', "").replace("[", "") \
+        pos = lines[39].replace('"', "").replace("translation:", "").replace(',', "").replace("[", "") \
             .replace("]", "").lstrip().rstrip()
-        posx = pos[0:4]
-        posy = pos[5:9]
-        posz = pos[10:14]
+        posx = pos.split()[0]
+        posy = pos.split()[1]
+        posz = pos.split()[2]
         self.PosX.setValue(float(posx))
         self.PosY.setValue(float(posy))
         self.PosZ.setValue(float(posz))
 
         # Rot
-        rot = lines[38].replace('"', "").replace("            rotation: 	", "").replace(',', "").replace("[", "") \
+        rot = lines[38].replace('"', "").replace("rotation:", "").replace(',', "").replace("[", "") \
             .replace("]", "").lstrip().rstrip()
-
-        self.RotX.setMinimum(-200)
-        self.RotY.setMinimum(-200)
-        self.RotZ.setMinimum(-200)
-
         rotx = rot.split()[0]
         roty = rot.split()[1]
         rotz = rot.split()[2]
-        self.RotX.setValue(int(rotx))
-        self.RotY.setValue(int(roty))
-        self.RotZ.setValue(int(rotz))
+        self.RotX.setValue(float(rotx))
+        self.RotY.setValue(float(roty))
+        self.RotZ.setValue(float(rotz))
 
         # Scale
         print(lines[40].replace('"', ""))
-        scale = lines[40].replace('"', "").replace("            scale: 	", "").replace(',', "").replace("[", "") \
+        scale = lines[40].replace('"', "").replace("scale:", "").replace(',', "").replace("[", "") \
             .replace("]", "").lstrip().rstrip()
-        scalex = scale[0:4]
-        scaley = scale[5:9]
-        scalez = scale[10:14]
+        scalex = scale.split()[0]
+        scaley = scale.split()[1]
+        scalez = scale.split()[2]
         self.ScaleX.setValue(float(scalex))
         self.ScaleY.setValue(float(scaley))
         self.ScaleZ.setValue(float(scalez))
